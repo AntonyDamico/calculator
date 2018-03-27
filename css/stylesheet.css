@@ -1,11 +1,11 @@
 body {
-	background: black;
+	background: grey;
 }
 
 
 #container {
 	width: 450px;
-	height: 600px;
+	/*height: 600px;*/
 	margin: 0 auto;
 	background: white;
 }
@@ -41,4 +41,24 @@ table {
 
 #display, #result {
 	text-align: right;
+}
+
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
+}
+
+li {
+	height: 38px;
+	background: white;
+	text-align: right;
+	border: 1px solid black;
+	line-height: 38px;
+}
+
+.visible {
+	display: none;
 }

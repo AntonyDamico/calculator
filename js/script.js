@@ -3,19 +3,28 @@ var mainDisplay = document.querySelector("#display");
 var result = document.querySelector("#result");
 var deleteOne = document.querySelector("#deleteOne");
 var deleteAll = document.querySelector("#deleteAll");
-
+var lista = document.querySelector("ul");
+var makeVisible = document.querySelector("#makeVisible");
+var keyboard = document.querySelector("#buttonNumbers");
 
 for(var i = 0; i < button.length; i++){
 	button[i].addEventListener("click", function(){
 		if(this.textContent !== "=" && this.textContent !== "<-"){
-			mainDisplay.textContent = mainDisplay.textContent + this.textContent;
+			mainDisplay.textContent += this.textContent;
 		}
 
 		if(this.textContent === "="){
 			result.textContent = mainDisplay.textContent + " = " + calculate(mainDisplay.textContent);
+			lista.innerHTML	 += "<li>" + result.textContent + "</li>";
 		}
 	})
 }
+
+
+makeVisible.addEventListener("click", function(){
+	lista.classList.toggle("visible");
+	keyboard.classList.toggle("visible");
+})
 
 
 deleteOne.addEventListener("click", function(){
@@ -25,9 +34,6 @@ deleteOne.addEventListener("click", function(){
 deleteAll.addEventListener("click", function(){
 	mainDisplay.textContent = "";
 })
-
-
-
 
 
 
