@@ -1,7 +1,9 @@
 var button = document.querySelectorAll("#buttonNumbers td");
 var mainDisplay = document.querySelector("#display");
 var result = document.querySelector("#result");
-console.log(button[3].textContent);
+var deleteOne = document.querySelector("#deleteOne");
+var deleteAll = document.querySelector("#deleteAll");
+
 
 for(var i = 0; i < button.length; i++){
 	button[i].addEventListener("click", function(){
@@ -14,6 +16,21 @@ for(var i = 0; i < button.length; i++){
 		}
 	})
 }
+
+
+deleteOne.addEventListener("click", function(){
+	mainDisplay.textContent = mainDisplay.textContent.slice(0, -1);
+})
+
+deleteAll.addEventListener("click", function(){
+	mainDisplay.textContent = "";
+})
+
+
+
+
+
+
 
 
 function calculate(str){
