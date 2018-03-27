@@ -11,13 +11,14 @@ body {
 }
 
 
-#result {
-	height: 225px;
+.result {
+	height: 112px;
 }
 
-#display {
+#display, #log {
 	width: 500px;
 }
+
 
 
 tr {
@@ -36,4 +37,8 @@ table {
 	border-spacing: 0;
 	border-collapse: collapse;
 	text-align: center;
+}
+
+#display, #result {
+	text-align: right;
 }
