@@ -1,0 +1,39 @@
+body {
+	background: black;
+}
+
+
+#container {
+	width: 450px;
+	height: 600px;
+	margin: 0 auto;
+	background: white;
+}
+
+
+#result {
+	height: 225px;
+}
+
+#display {
+	width: 500px;
+}
+
+
+tr {
+	height: 75px;
+}
+
+
+
+td {
+	border: 1px solid black;
+	margin: 0;
+	width: 125px;
+}
+
+table {
+	border-spacing: 0;
+	border-collapse: collapse;
+	text-align: center;
+}
