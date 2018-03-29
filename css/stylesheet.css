@@ -1,12 +1,11 @@
 body {
-	background: grey;
+	background: rgb(200,200, 200);
 	font-family: "Orbitron"
 }
 
 
 #container {
-	width: 450px;
-	/*height: 600px;*/
+	width: 400px;
 	margin: 30px auto;
 	background: white;
 	background: rgb(33, 38, 40);
@@ -109,6 +108,20 @@ a {
 
 #equal:hover {
 	background: rgb(29, 122, 13);
+}
+
+button {
+	border: none;
+	background: none;
+	height: 100%;
+	font-size: 1.5em;
+	color: white;
+	font-family: "Orbitron"
+	outline: none;
+}
+
+button:focus {
+	outline: none;
 }
 
 

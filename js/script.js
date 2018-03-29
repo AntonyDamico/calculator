@@ -10,7 +10,13 @@ var keyboard = document.querySelector(".buttonNumbers");
 for(var i = 0; i < button.length; i++){
 	button[i].addEventListener("click", function(){
 		if(this.textContent !== "=" && this.textContent !== "<-"){
-			mainDisplay.textContent += this.textContent;
+			if(this.textContent === "."){
+				if(mainDisplay.textContent[mainDisplay.textContent.length - 1] !== "."){
+					mainDisplay.textContent += this.textContent;
+				}
+			} else {
+				mainDisplay.textContent += this.textContent;
+			}
 		}
 
 		if(this.textContent === "="){
