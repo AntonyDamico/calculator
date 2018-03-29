@@ -5,12 +5,14 @@
 	<title>Calculator</title>
 	<link rel="stylesheet" href="css/stylesheet.css" type="text/css">
 	<link rel="stylesheet" href="css/lib/animate.css" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Orbitron:400" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 </head>
 <body>
 	
 
 <div id="container">
-	<table>
+	<table >
 		<tr class="result">
 			<td id="display"></td>
 		</tr>
@@ -18,12 +20,12 @@
 			<td id="result"></td>
 		</tr>
 	</table>
-	
-	<table id="buttonNumbers">
-		<tr>
-			<td id="makeVisible">v</td>
-			<td id="deleteOne"><-</td>
-			<td id="deleteAll"><--</td>
+	<button id="makeVisible">V</button>
+	<table class="buttonNumbers">
+		<tr id="operations">
+			<td id="deleteAll">CA</td>
+			<td id="deleteOne"><i class="fas fa-arrow-left"></i></td>
+			<td><a href="https://github.com/AntonyDamico"><i class="fab fa-3x fa-github"></i></a></td>
 			<td>/</td>
 		</tr>
 
@@ -31,7 +33,7 @@
 			<td>7</td>
 			<td>8</td>
 			<td>9</td>
-			<td>x</td>
+			<td id="operations">x</td>
 		</tr>
 
 
@@ -39,7 +41,7 @@
 			<td>4</td>
 			<td>5</td>
 			<td>6</td>
-			<td>-</td>
+			<td id="operations">-</td>
 		</tr>
 
 
@@ -47,14 +49,14 @@
 			<td>1</td>
 			<td>2</td>
 			<td>3</td>
-			<td>+</td>
+			<td id="operations">+</td>
 		</tr>
 
 		<tr>
 			<td>0</td>
 			<td>00</td>
 			<td>.</td>
-			<td>=</td>
+			<td class="green" id="equal">=</td>
 		</tr>
 
 

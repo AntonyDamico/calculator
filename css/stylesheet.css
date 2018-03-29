@@ -1,19 +1,30 @@
 body {
 	background: grey;
+	font-family: "Orbitron"
 }
 
 
 #container {
 	width: 450px;
 	/*height: 600px;*/
-	margin: 0 auto;
+	margin: 30px auto;
 	background: white;
+	background: rgb(33, 38, 40);
+	border: 1px solid black;
+	color: white;
+}
+
+#operations {
+	background: rgb(19, 21, 22);
+
 }
 
 
 .result {
-	height: 112px;
+	height: 56px;
+	font-size: 1.5em
 }
+
 
 #display, #log {
 	width: 500px;
@@ -28,7 +39,7 @@ tr {
 
 
 td {
-	border: 1px solid black;
+	border: 1px solid rgb(10, 10, 10);
 	margin: 0;
 	width: 125px;
 }
@@ -38,6 +49,7 @@ table {
 	border-collapse: collapse;
 	text-align: center;
 }
+
 
 #display, #result {
 	text-align: right;
@@ -49,16 +61,54 @@ ul {
 	padding: 0;
 	list-style: none;
 	text-align: center;
+	background: rgb(10, 10, 10);
 }
 
 li {
-	height: 38px;
-	background: white;
+	height: 50px;
 	text-align: right;
 	border: 1px solid black;
-	line-height: 38px;
+	line-height: 50px;
 }
 
 .visible {
 	display: none;
 }
+
+button {
+	width: 100%;
+}
+
+
+.green, .equal{
+	background: rgb(53, 214, 25);
+	/*border: 1px solid green;
+	border-radius: 15%;*/
+}
+
+.result {
+	background: rgb(10, 10, 10);
+}
+
+a {
+	color: white;
+}
+
+
+#deleteAll, #deleteOne {
+	background: rgb(99, 0, 0)
+}
+
+#deleteAll:hover, #deleteOne:hover {
+	background: rgb(168, 0, 0);
+}
+
+.buttonNumbers td:hover {
+	background: rgb(19, 21, 22);
+}
+
+#equal:hover {
+	background: rgb(29, 122, 13);
+}
+
+

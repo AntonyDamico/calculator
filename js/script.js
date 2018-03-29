@@ -1,11 +1,11 @@
-var button = document.querySelectorAll("#buttonNumbers td");
+var button = document.querySelectorAll(".buttonNumbers td");
 var mainDisplay = document.querySelector("#display");
 var result = document.querySelector("#result");
 var deleteOne = document.querySelector("#deleteOne");
 var deleteAll = document.querySelector("#deleteAll");
 var lista = document.querySelector("ul");
 var makeVisible = document.querySelector("#makeVisible");
-var keyboard = document.querySelector("#buttonNumbers");
+var keyboard = document.querySelector(".buttonNumbers");
 
 for(var i = 0; i < button.length; i++){
 	button[i].addEventListener("click", function(){
@@ -14,8 +14,9 @@ for(var i = 0; i < button.length; i++){
 		}
 
 		if(this.textContent === "="){
-			result.textContent = mainDisplay.textContent + " = " + calculate(mainDisplay.textContent);
-			lista.innerHTML	 += "<li>" + result.textContent + "</li>";
+			// result.textContent = mainDisplay.textContent + " = " + calculate(mainDisplay.textContent);
+			result.innerHTML = mainDisplay.textContent + ' =  <span class="green">' + calculate(mainDisplay.textContent) + '</span>';
+			lista.innerHTML	= "<li>" + result.textContent + "</li>" + lista.innerHTML;
 		}
 	})
 }
@@ -33,6 +34,7 @@ deleteOne.addEventListener("click", function(){
 
 deleteAll.addEventListener("click", function(){
 	mainDisplay.textContent = "";
+	result.textContent = "";
 })
 
 
