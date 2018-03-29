@@ -10,6 +10,7 @@ var keyboard = document.querySelector(".buttonNumbers");
 for(var i = 0; i < button.length; i++){
 	button[i].addEventListener("click", function(){
 		if(this.textContent !== "=" && this.textContent !== "<-"){
+
 			if(this.textContent === "."){
 				if(mainDisplay.textContent[mainDisplay.textContent.length - 1] !== "."){
 					mainDisplay.textContent += this.textContent;
@@ -17,6 +18,7 @@ for(var i = 0; i < button.length; i++){
 			} else {
 				mainDisplay.textContent += this.textContent;
 			}
+			
 		}
 
 		if(this.textContent === "="){
@@ -24,7 +26,7 @@ for(var i = 0; i < button.length; i++){
 			result.innerHTML = mainDisplay.textContent + ' =  <span class="green">' + calculate(mainDisplay.textContent) + '</span>';
 			lista.innerHTML	= "<li>" + result.textContent + "</li>" + lista.innerHTML;
 		}
-	})
+	});
 }
 
 
@@ -42,8 +44,6 @@ deleteAll.addEventListener("click", function(){
 	mainDisplay.textContent = "";
 	result.textContent = "";
 })
-
-
 
 
 
@@ -93,13 +93,10 @@ function operate(arr){
 				break;
 		}
 
-		console.log(arr);
 		arr[i + 1] = total;
 		arr.shift();
 		arr.shift();
-		console.log(arr  + "------------------");
 	}
 	
-
 	return total;
 }
